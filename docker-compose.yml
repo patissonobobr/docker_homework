@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  backend:
+    image: localhost:5000/backend
+    depends_on:
+      - database
+    
+  frontend:
+     image: localhost:5000/frontend
+     ports:
+      - "3000:3000"
+     depends_on:
+      - backend
+     stdin_open: true 
+     tty: true
+    
+  database:
+     image: postgres
+     environment:
+      - POSTGRES_NAME=django
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=django
+     
