@@ -1,0 +1,1 @@
+docker run --rm --network=mynet -e POSTGRES_NAME=postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -it backend /bin/sh -l
