@@ -1,3 +1,3 @@
-#!/bin/sh
-python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
+#!/bin/python
+manage.py migrate
+manage.py runserver 0.0.0.0:8000
